@@ -31,9 +31,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.michaldabski.filemanager.R;
+import com.michaldabski.filemanager.folders.FolderActivity;
 import com.michaldabski.utils.FontApplicator;
 
 public class AboutActivity extends Activity implements OnClickListener
@@ -45,6 +47,19 @@ public class AboutActivity extends Activity implements OnClickListener
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
+		Button button1 = (Button) findViewById(R.id.button1);
+		button1.setOnClickListener(new View.OnClickListener(){
+			@Override
+			public void onClick(View v){
+				//Intent是一种运行时绑定（run-time binding）机制，它能在程序运行过程中连接两个不同的组件。
+				//在存放资源代码的文件夹下下，
+				Intent i = new Intent(AboutActivity.this , FolderActivity.class);
+				//启动
+				startActivity(i);
+			}
+		});
+
+
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_about);
 		// Show the Up button in the action bar.

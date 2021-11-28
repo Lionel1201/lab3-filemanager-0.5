@@ -59,7 +59,7 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class FolderActivity extends Activity implements OnItemClickListener, ClipboardListener, FavouritesListener
-{	
+{
 	public static class FolderNotOpenException extends Exception
 	{
 		
@@ -77,6 +77,7 @@ public class FolderActivity extends Activity implements OnItemClickListener, Cli
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
+
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
@@ -388,5 +389,7 @@ public class FolderActivity extends Activity implements OnItemClickListener, Cli
         }
         else return super.onKeyLongPress(keyCode, event);
     }
+
+
 
 }
